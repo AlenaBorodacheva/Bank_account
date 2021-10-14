@@ -14,7 +14,7 @@ namespace Bank
         {
             Account account = new Account();
 
-            account.WriteAccountNumber(40888005553535123456M);
+            account.CreateAccountNumber();
             account.WriteBalance(5000);
             account.WriteBankAccountType(BankAccountType.Current);
 
@@ -25,6 +25,10 @@ namespace Bank
             Console.WriteLine($"{nameof(accountNumber)}: {accountNumber}");
             Console.WriteLine($"{nameof(balance)}: {balance}");
             Console.WriteLine($"{nameof(accountType)}: {accountType}");
+
+            account.CreateAccountNumber();
+            var newAccountNumber = account.ReadAccountNumber();
+            Console.WriteLine($"{nameof(newAccountNumber)}: {newAccountNumber}");
 
             Console.ReadLine();
         }

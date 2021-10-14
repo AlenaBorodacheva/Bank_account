@@ -2,7 +2,7 @@
 {
     class Account
     {
-        private decimal _accountNumber;
+        private static decimal _accountNumber;
         private double _balance;
         private BankAccountType _accountType;
 
@@ -19,12 +19,7 @@
         public BankAccountType ReadBankAccountType()
         {
             return _accountType;
-        }
-
-        public void WriteAccountNumber(decimal accountNumber)
-        {
-            _accountNumber = accountNumber;
-        }
+        }      
 
         public void WriteBalance(double balance)
         {
@@ -34,6 +29,15 @@
         public void WriteBankAccountType(BankAccountType accountType)
         {
             _accountType = accountType;
+        }
+
+        public decimal CreateAccountNumber()
+        {
+            if(_accountNumber == 0)
+            {
+                return _accountNumber = 40800000000000000000M;
+            }
+            return _accountNumber++;
         }
     }
 }
