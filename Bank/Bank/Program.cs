@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace Bank
         {
             Account account = new Account();
 
-            account.WriteAccountNumber("40888005553535123456");
+            account.WriteAccountNumber(40888005553535123456M);
             account.WriteBalance(5000);
             account.WriteBankAccountType(BankAccountType.Current);
 

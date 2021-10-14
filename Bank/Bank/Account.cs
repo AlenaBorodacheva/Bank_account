@@ -2,11 +2,11 @@
 {
     class Account
     {
-        private string _accountNumber;
+        private decimal _accountNumber;
         private double _balance;
         private BankAccountType _accountType;
 
-        public string ReadAccountNumber()
+        public decimal ReadAccountNumber()
         {
             return _accountNumber;
         }
@@ -21,7 +21,7 @@
             return _accountType;
         }
 
-        public void WriteAccountNumber(string accountNumber)
+        public void WriteAccountNumber(decimal accountNumber)
         {
             _accountNumber = accountNumber;
         }
