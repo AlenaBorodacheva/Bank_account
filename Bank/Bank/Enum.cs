@@ -10,4 +10,10 @@
         RecurringDeposit,
         NRI
     }
+
+    public enum Result
+    {
+        Success,
+        Unsuccess
+    }
 }

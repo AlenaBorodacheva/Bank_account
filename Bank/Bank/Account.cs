@@ -59,5 +59,28 @@
             _accountNumber++;
             return _accountNumber;
         }
+
+        public Result Withdraw(decimal money)
+        {
+            try
+            {
+                _balance += money;
+                return Result.Success;
+            }
+            catch
+            {
+                return Result.Unsuccess;
+            }
+        }
+
+        public Result Deposit(decimal money)
+        {
+            if(_balance >= money)
+            {
+                _balance  -= money;
+                return Result.Success;
+            }
+            return Result.Unsuccess;
+        }
     }
 }
