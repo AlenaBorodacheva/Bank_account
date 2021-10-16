@@ -3,15 +3,38 @@
     class Account
     {
         private static decimal _accountNumber;
-        private double _balance;
+        private decimal _balance;
         private BankAccountType _accountType;
+
+        public decimal AccountNumber 
+        {
+            get 
+            { return _accountNumber; }
+            private set
+            { _accountNumber = value; } 
+        }
+        public decimal Balance
+        {
+            get
+            { return _balance; }
+            private set
+            { _balance = value; }
+        }
+        public BankAccountType AccountType
+        {
+            get
+            { return _accountType; }
+            private set
+            { _accountType = value; }
+        }
+
 
         public Account()
         {
             _accountNumber = CreateAccountNumber();
         }
 
-        public Account(double balance) : this()
+        public Account(decimal balance) : this()
         {
             _balance = balance;
         }
@@ -21,26 +44,11 @@
             _accountType = accountType;
         }
 
-        public Account(double balance, BankAccountType accountType) : this()
+        public Account(decimal balance, BankAccountType accountType) : this()
         {
             _balance = balance;
             _accountType = accountType;
         }
-
-        public decimal ReadAccountNumber()
-        {
-            return _accountNumber;
-        }
-
-        public double ReadBalance()
-        {
-            return _balance;
-        }
-
-        public BankAccountType ReadBankAccountType()
-        {
-            return _accountType;
-        }   
 
         private decimal CreateAccountNumber()
         {

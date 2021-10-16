@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bank
 {
@@ -25,9 +19,9 @@ namespace Bank
 
             void ShowData(Account account)
             {
-                var accountNumber = account.ReadAccountNumber();
-                var balance = account.ReadBalance();
-                var accountType = account.ReadBankAccountType();
+                var accountNumber = account.AccountNumber;
+                var balance = account.Balance;
+                var accountType = account.AccountType;
 
                 Console.WriteLine($"{nameof(accountNumber)}: {accountNumber}");
                 Console.WriteLine($"{nameof(balance)}: {balance}");
