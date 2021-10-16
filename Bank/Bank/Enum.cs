@@ -2,6 +2,7 @@
 {
     public enum BankAccountType
     {
+        Unknown,
         Current,
         Savings,
         Salary,
