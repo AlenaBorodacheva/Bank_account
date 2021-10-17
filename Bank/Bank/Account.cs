@@ -2,7 +2,8 @@
 {
     class Account
     {
-        private static decimal _accountNumber;
+        private static decimal _lastAccountNumber;
+        private decimal _accountNumber;
         private decimal _balance;
         private BankAccountType _accountType;
 
@@ -31,7 +32,7 @@
 
         public Account()
         {
-            _accountNumber = CreateAccountNumber();
+            CreateAccountNumber();
         }
 
         public Account(decimal balance) : this()
@@ -50,14 +51,17 @@
             _accountType = accountType;
         }
 
-        private decimal CreateAccountNumber()
+        private void CreateAccountNumber()
         {
-            if (_accountNumber == 0)
+            if (_lastAccountNumber == 0)
             {
-                return _accountNumber = 40800000000000000000M;
+                _lastAccountNumber = 40800000000000000000M;               
             }
-            _accountNumber++;
-            return _accountNumber;
+            else
+            {
+                _lastAccountNumber++;
+            }           
+            _accountNumber = _lastAccountNumber;
         }
 
         public Result Withdraw(decimal money)
@@ -78,6 +82,17 @@
             if(_balance >= money)
             {
                 _balance  -= money;
+                return Result.Success;
+            }
+            return Result.Unsuccess;
+        }
+
+        public Result GetMoneyFrom(Account account, decimal money)
+        {
+            if(account._balance >= money && account._accountNumber != _accountNumber)
+            {
+                account._balance -= money;
+                _balance += money;
                 return Result.Success;
             }
             return Result.Unsuccess;
