@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Building_Lesson_4_
 {
-    class Building
+    class Building : House
     {      
         private static int lastNumber = 0;
         private int number;
@@ -26,7 +26,7 @@ namespace Building_Lesson_4_
             number = lastNumber;
         }
 
-        public void SetHigh(int high)
+        public void SetHigh(double high)
         {
             this.high = high;
         }
@@ -85,5 +85,11 @@ namespace Building_Lesson_4_
         {
             return numberOfAprtments / numberOfEntrances / numberOfLevels;
         }
+
+    }
+
+    public abstract class House
+    { 
+    
     }
 }
