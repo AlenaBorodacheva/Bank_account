@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Polymorphism_Lesson_5_
+﻿namespace Polymorphism_Lesson_5_
 {
-    class ComplexNumber
+    public class ComplexNumber
     {
         private float _real;
         private float _image;
