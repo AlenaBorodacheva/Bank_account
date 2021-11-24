@@ -45,5 +45,12 @@ namespace RPG_Lesson_6_.Figure
         {
             return _height * _widht;
         }
+
+        public override void Watch()
+        {
+            Console.WriteLine("This is Rectangle.");
+            base.Watch();
+            Console.WriteLine("Square: " + Square());
+        }
     }
 }

@@ -35,5 +35,11 @@ namespace RPG_Lesson_6_.Figure
             _y = y;
             pointAsFigure = this;
         }
+
+        public override void Watch()
+        {
+            Console.WriteLine("This is Point.");
+            base.Watch();
+        }
     }
 }

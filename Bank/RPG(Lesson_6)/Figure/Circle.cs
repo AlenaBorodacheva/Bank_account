@@ -31,5 +31,12 @@ namespace RPG_Lesson_6_.Figure
         {
             return 3.14 * _radius * _radius;
         }
+
+        public override void Watch()
+        {
+            Console.WriteLine("This is Circle.");
+            base.Watch();
+            Console.WriteLine("Square: " + Square());
+        }
     }
 }
