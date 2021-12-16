@@ -18,9 +18,7 @@ namespace Abstracts_Lesson_7_
             string text2 = "В лесу родилась ёлочка";
             Console.WriteLine(text2);
             Console.WriteLine(bCoder.Decode(text2));
-            Console.WriteLine(bCoder.Encode(bCoder.Decode(text2)));
-
-            Console.ReadLine();
+            Console.Out.WriteLine(bCoder.Encode(bCoder.Decode(text2)));
         }
     }
 }

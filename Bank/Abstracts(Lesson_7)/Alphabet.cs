@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Abstracts_Lesson_7_
 {
-    public static class Alphabet
+    internal static class Alphabet
     {
         public static readonly char[] alphabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯ".ToCharArray();
     }

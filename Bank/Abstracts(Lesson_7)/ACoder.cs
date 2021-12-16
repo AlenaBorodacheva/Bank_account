@@ -3,7 +3,7 @@ using static Abstracts_Lesson_7_.Alphabet;
 
 namespace Abstracts_Lesson_7_
 {
-    class ACoder : ICoder<string>
+    internal class ACoder : ICoder<string>
     {
         public string Decode(string item)
         {

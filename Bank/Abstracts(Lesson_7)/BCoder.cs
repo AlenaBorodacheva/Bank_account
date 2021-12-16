@@ -4,7 +4,7 @@ using static Abstracts_Lesson_7_.Alphabet;
 
 namespace Abstracts_Lesson_7_
 {
-    class BCoder : ICoder<string>
+    internal class BCoder : ICoder<string>
     {
         public string Decode(string item)
         {
