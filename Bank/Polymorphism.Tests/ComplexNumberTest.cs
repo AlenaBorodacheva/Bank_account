@@ -1,5 +1,4 @@
 ﻿using Polymorphism_Lesson_5_;
-using System;
 using Xunit;
 
 namespace Polymorphism.Tests
